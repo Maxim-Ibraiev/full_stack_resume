@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Inter" system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --accent: #e0394d;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  border-color: rgba(255, 255, 255, 0.87);
+
+  background-color: #242424;
+
+  box-sizing: border-box;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main {
+  background-color: #2b2b2b;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+a {
+  font-weight: 500;
+  color: #c3c6fa;
+
+  text-decoration: underline;
+}
+a:hover,
+a:active {
+  color: #535bf2;
+}
+
+.contentBlock {
+  padding-top: 16px;
+  border-top: 1px solid var(--accent);
+}
+.contentBlock:not(:last-child) {
+  padding-bottom: 16px;
+}
+
+.contentBlock__fit {
+  display: flex;
+  justify-content: space-between;
+
+  padding-left: 40px;
+}
+.contentBlock__fit:not(:last-child) {
+  margin-bottom: 16px;
+}
+.contentBlock__fit > * {
+  min-width: 20%;
+}
+.contentBlock__fit > *:first-child {
+  max-width: 75%;
+}
+
+.spliter > * {
+  padding-right: 10px;
+}
+.spliter > *:not(:first-child) {
+  padding-left: 10px;
+
+  border-left: 1px solid;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #474247;
+    border-color: #474247;
+    background-color: #d8d8d8;
+    --accent: #a00013;
+  }
+  main {
+    background-color: #ffffff;
+  }
+  a {
+    color: #363a8f;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
