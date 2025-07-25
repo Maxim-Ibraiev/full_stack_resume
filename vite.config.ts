@@ -3,8 +3,8 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [tailwindcss()],
   base: "/full_stack_resume/",
+  plugins: [tailwindcss()],
   build: {
     rollupOptions: {
       input: {
